@@ -1,0 +1,46 @@
+.seccion-columnas {
+  padding: 0;
+  margin: 0;
+}
+
+.columna {
+  padding: 60px 40px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.columna h3 {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.columna p {
+  font-size: 16px;
+  color: white;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.columna-roja {
+  background-color: #e31e24;
+}
+
+.columna-verde {
+  background-color: #8bc53f;
+}
+
+.columna-naranja {
+  background-color: #ff9900;
+}
+
+footer {
+  border-top: 1px solid #ddd;
+  font-size: 16px;
+  color: #666;
+}

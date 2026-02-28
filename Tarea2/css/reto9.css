@@ -1,0 +1,50 @@
+.logos-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 80vh;
+}
+
+.logos-section h1 {
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.logo-link {
+    text-decoration: none;
+    display: block;
+    height: 100%;
+}
+
+.logo-card {
+    background: white;
+    border-radius: 12px;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.logo-card img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.logo-link:hover .logo-card {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .logos-section {
+        padding: 40px 0;
+    }
+
+    .logo-card {
+        height: 150px;
+    }
+}

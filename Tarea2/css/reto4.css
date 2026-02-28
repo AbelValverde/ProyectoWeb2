@@ -1,0 +1,45 @@
+.seccion-servicios {
+  background-color: white;
+  padding: 80px 20px;
+}
+
+.icon-servicio {
+  font-size: 70px;
+  color: #00c9d7;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.titulo-servicio {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.texto-servicio {
+  font-size: 15px;
+  color: #777;
+  line-height: 1.6;
+}
+
+.tarjeta-servicio {
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+}
+
+.tarjeta-servicio:hover {
+  transform: translateY(-8px);
+}
+
+.tarjeta-servicio:hover .icon-servicio {
+  color: #0099aa;
+}
+
+footer {
+  border-top: 1px solid #ddd;
+  font-size: 16px;
+  color: #666;
+}

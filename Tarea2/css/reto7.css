@@ -1,0 +1,117 @@
+.seccion-fotografica {
+  background-color: #f9f9f9;
+  padding: 80px 20px;
+}
+
+.titulo-seccion {
+  font-size: 45px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 50px;
+}
+
+.ih-item {
+  position: relative;
+  transition: all 0.35s ease-in-out;
+}
+
+.ih-item * {
+  box-sizing: border-box;
+}
+
+.ih-item a {
+  color: #333;
+  text-decoration: none;
+}
+
+.ih-item a:hover {
+  text-decoration: none;
+}
+
+.ih-item img {
+  width: 100%;
+  height: auto;
+}
+
+.ih-item.circle {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.ih-item.circle .img {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.ih-item.circle .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ih-item.circle .info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.ih-item.circle.colored .info {
+  background: rgba(0, 123, 255, 0.8);
+}
+
+.ih-item.circle .info h3 {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ih-item.circle .info p {
+  color: white;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.ih-item.circle.effect17 .info {
+  transform: scale(0);
+}
+
+.ih-item.circle.effect17:hover .info {
+  opacity: 1;
+  transform: scale(1);
+}
+
+footer {
+  border-top: 1px solid #ddd;
+  font-size: 16px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .ih-item.circle,
+  .ih-item.circle .img {
+    width: 250px;
+    height: 250px;
+  }
+}
