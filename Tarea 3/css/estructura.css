@@ -1,0 +1,160 @@
+
+/*CHAT WHATAPP*/
+
+.container-botonws {
+    /*color de fondo imagen*/
+    background-color: #e4e4e4;
+    border: 1px solid #fff;
+    position: fixed;
+    z-index: 1000;
+    border-radius: 50%;
+    bottom: 20px;
+    right: 25px;
+    padding: 25px;
+    transition: ease 0.3s;
+    animation: efecto 1.2s infinite;
+}
+
+.container-botonws:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+
+/*efecto de animación imagen chat*/
+
+.botonws {
+    width: 60px;
+    transition: ease 1s;
+}
+
+@keyframes efecto {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
+    }
+    100% {
+        box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
+    }
+}
+
+
+
+/*********************  ENCABEZADO BANNER WEB INICIAL ******************************/
+
+.banner-section {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    /*control altura del banner*/
+    height: calc(100vh);
+    background-position: center;
+    background-image: url('../imagenes/campingbanner.jpg');
+    background-color: #928372;
+    background-blend-mode: multiply;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
+}
+
+.espacio {
+    padding: 120px 0;
+}
+
+.linea {
+    margin: 5rem 0;
+}
+
+.bannerparallax {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    /*control altura del banner*/
+    height: calc(40vh);
+    background-position: center;
+    background-image: url('../imagenes/campingtrees.jpg');
+    background-color: brown;
+    background-blend-mode: multiply;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+}
+
+
+/*********************  PIE DE PAGINA ******************************/
+
+footer {
+    color: #fff;
+    padding-top: 10px;
+    background-color: #928372;
+}
+
+
+
+
+/* Etiquetas */
+
+label {
+    color: #000;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: bolder;
+    float: left;
+}
+
+
+
+
+/* Para agregar un borde cuando se activan los campos */
+
+input:hover {
+    outline: 3px solid brown;
+}
+
+textarea:hover {
+    outline: 3px solid brown;
+}
+
+
+/* Propiedades de los campos */
+
+input,
+textarea {
+    cursor: pointer;
+    background-color: #e2e2e2 !important;
+}
+
+
+/* validacion campo TextArea */
+
+textarea {
+    resize: none;
+}
+
+
+/********************* MEDIAS QUERYS ******************************/
+
+@media (max-width: 575px) {
+    html {
+        font-size: 1rem;
+    }
+    .titulo {
+        font-size: 2.5rem;
+        margin-top: 150px;
+    }
+    p {
+        font-size: 1.1rem !important;
+    }
+    .bannerparallax {
+        height: calc(100vh);
+    }
+}
+
+
+/*  
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1140px;
+    }
+}
+*/
