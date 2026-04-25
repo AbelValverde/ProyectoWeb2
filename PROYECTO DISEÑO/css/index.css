@@ -1,0 +1,1085 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: #1d2521;
+    background: #f5f3eb;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Playfair Display", serif;
+}
+
+main section {
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+}
+
+.site-nav {
+    background: rgba(22, 51, 39, 0.92);
+    backdrop-filter: blur(8px);
+}
+
+.site-nav .nav-link {
+    color: #ffffff;
+    font-weight: 600;
+    margin: 0 0.25rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.site-nav .nav-link:hover,
+.site-nav .nav-link:focus,
+.site-nav .nav-link.active {
+    background: #d6a94f;
+    color: #163327;
+}
+
+.brand-mark {
+    width: 2.125rem;
+    height: 2.125rem;
+    margin-right: 0.625rem;
+}
+
+.hero {
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg, rgba(15, 29, 22, 0.55), rgba(34, 73, 54, 0.25));
+}
+
+.hero .hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 4.625rem;
+    color: #ffffff;
+    letter-spacing: 0.0625rem;
+}
+
+.hero-subtitle {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 1.3125rem;
+    max-width: 47.5rem;
+}
+
+.btn-eco {
+    background: #d6a94f;
+    color: #163327;
+    border: 0;
+    font-weight: 700;
+}
+
+.btn-eco:hover {
+    background: #e2bd74;
+    color: #163327;
+}
+
+.section-title {
+    font-size: 2.875rem;
+    color: #163327;
+}
+
+.section-kicker {
+    color: #1f5f43;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+}
+
+.eco-card {
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 16px 38px rgba(16, 34, 26, 0.14);
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.eco-card img {
+    width: 100%;
+    height: 14.375rem;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+}
+
+.eco-card:hover img {
+    transform: scale(1.06);
+}
+
+.clip-feature {
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%);
+    background: linear-gradient(140deg, #163327, #2d8a5a);
+    color: #ffffff;
+}
+
+.full-banner {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.full-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(14, 26, 20, 0.58);
+}
+
+.full-banner .container {
+    position: relative;
+    z-index: 1;
+}
+
+.story-banner {
+    background: #ededed;
+    padding: 3.1rem 0 2.7rem;
+}
+
+.story-kicker {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    color: #0f1f1a;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.story-word {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(2.4rem, 8vw, 5.5rem);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1.6rem;
+    background-image: url("../img/hero-montana.jpg");
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.story-col {
+    color: #16241e;
+    font-size: 1.02rem;
+    line-height: 1.65;
+    padding-right: 1.5rem;
+}
+
+.story-col-right {
+    border-left: 1px solid #d8d8d8;
+    padding-left: 2rem;
+}
+
+/* ============================================
+   TABLA DE PRECIOS — patrón de práctica
+   ============================================ */
+
+.price-table {
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    background-color: #ffffff;
+    border: 2px solid #d8d8d8;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.price-table i {
+    color: #2d8a5a;
+    font-size: 1.875rem;
+    text-align: center;
+}
+
+.price-table h3 {
+    color: #163327;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.price-table p {
+    color: #1d2521;
+    margin-bottom: 0.25rem;
+}
+
+/* al pasar el mouse, todo el texto vuelve blanco */
+.price-table:hover * {
+    color: #ffffff;
+}
+
+/* tarjeta destacada (Plan Élite) — siempre verde oscuro */
+.price-table-featured {
+    background-color: #163327;
+}
+
+.price-table-featured h3,
+.price-table-featured p,
+.price-table-featured .price-titulos {
+    color: #ffffff;
+}
+
+.price-table-featured i {
+    color: #d6a94f;
+}
+
+.price-table-featured .price-numeros {
+    color: #d6a94f;
+}
+
+.price-titulos {
+    font-weight: 700;
+    font-size: 1.0625rem;
+    display: inline-block;
+    margin-top: 0.9375rem;
+    color: #1d2521;
+}
+
+.price-numeros {
+    font-size: 3.75rem;
+    font-weight: 300;
+    color: #163327;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.1;
+    margin: 0.5rem 0 0.75rem;
+}
+
+/* Mobile: estado activo permanente, sin hover transform */
+@media (max-width: 576px) {
+    .price-table {
+        padding: 1.5rem !important;
+        background-color: #163327;
+        margin-bottom: 1rem;
+    }
+
+    .price-table h3 {
+        color: #ffffff;
+    }
+
+    .price-table .price-titulos,
+    .price-table p,
+    .price-table i {
+        color: #ffffff;
+    }
+
+    .price-table .price-numeros {
+        color: #d6a94f;
+        font-size: 3.75rem;
+    }
+
+    .price-table:hover {
+        background-color: #163327;
+        margin-top: initial;
+        z-index: initial;
+        transform: initial;
+        transition: initial;
+        border: initial;
+    }
+}
+
+/* Tablet y superior: efecto hover con escala y subida */
+@media (min-width: 768px) {
+    .price-table:hover {
+        background-color: #163327;
+        margin-top: -2.5rem;
+        z-index: 10;
+        transform: scale(1.2);
+        transition: all 0.2s ease-in;
+    }
+
+    .price-table-featured:hover {
+        background-color: #d6a94f;
+    }
+
+    .price-table-featured:hover * {
+        color: #163327 !important;
+    }
+}
+
+.table-wrap {
+    border-radius: 0.875rem;
+    overflow: hidden;
+    box-shadow: 0 16px 38px rgba(16, 34, 26, 0.14);
+}
+
+.gallery-item {
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 16px 38px rgba(16, 34, 26, 0.14);
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 16.25rem;
+    object-fit: cover;
+    transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+    filter: saturate(1.15);
+}
+
+.map-full iframe {
+    width: 100%;
+    height: 33.75rem;
+    border: 0;
+}
+
+.form-shell {
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 16px 38px rgba(16, 34, 26, 0.14);
+    overflow: hidden;
+    padding: 1.75rem;
+    background: #ffffff;
+}
+
+.video-frame {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 16px 38px rgba(16, 34, 26, 0.14);
+}
+
+.feature-icon {
+    width: 4.25rem;
+    height: 4.25rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8e2cf;
+    color: #1f5f43;
+    font-size: 1.5rem;
+}
+
+.transition-photo {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 16px 38px rgba(16, 34, 26, 0.14);
+}
+
+.transition-photo img {
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.transition-photo:hover img {
+    transform: scale(1.08);
+    filter: contrast(1.1);
+}
+
+.stat-box {
+    border-radius: 1rem;
+    background: #ffffff;
+    box-shadow: 0 16px 38px rgba(16, 34, 26, 0.14);
+    padding: 1.4rem;
+}
+
+.eco-timeline {
+    border-left: 3px solid #7ba88f;
+    margin: 0.5rem 0 2rem;
+    padding-left: 1.4rem;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 0.85rem 0 0.85rem 0.3rem;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -1.83rem;
+    top: 1.25rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #1f5f43;
+}
+
+.timeline-year {
+    display: inline-block;
+    font-weight: 700;
+    color: #1f5f43;
+    margin-bottom: 0.2rem;
+}
+
+.timeline-item p {
+    margin-bottom: 0;
+}
+
+.indicator-card {
+    border-radius: 1rem;
+    background: #ffffff;
+    box-shadow: 0 10px 26px rgba(19, 43, 31, 0.12);
+    padding: 1.1rem 1rem;
+}
+
+.indicator-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.45rem;
+}
+
+.indicator-card strong {
+    color: #1f5f43;
+    font-size: 1.25rem;
+}
+
+.actions-list {
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid #d1ddd2;
+    background: #f2f6f1;
+}
+
+.action-row {
+    display: flex;
+    gap: 1rem;
+    padding: 1.05rem 1.1rem;
+    border-bottom: 1px solid #d1ddd2;
+}
+
+.action-row:last-child {
+    border-bottom: 0;
+}
+
+.action-row h3 {
+    margin-bottom: 0.35rem;
+}
+
+.action-icon {
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: #dcebdc;
+    color: #1f5f43;
+}
+
+.impact-band {
+    border-radius: 1rem;
+    border: 1px solid #c5d8c9;
+    background: linear-gradient(135deg, #e6efe6, #edf4ea);
+    padding: 1rem;
+}
+
+.impact-metric {
+    border-radius: 0.85rem;
+    border: 1px solid #c7d9cb;
+    background: rgba(255, 255, 255, 0.55);
+    padding: 0.9rem;
+}
+
+.metric-label {
+    font-family: "Playfair Display", serif;
+    font-size: 1.25rem;
+    margin-bottom: 0.2rem;
+    color: #163327;
+}
+
+.metric-sub {
+    margin-bottom: 0.3rem;
+}
+
+.impact-metric strong {
+    color: #1f5f43;
+    font-size: 1.4rem;
+}
+
+.impact-note {
+    border-radius: 1rem;
+    padding: 1.25rem;
+}
+
+.impact-note-earth {
+    background: #efe7da;
+    border: 1px solid #ddccb1;
+}
+
+.impact-note-forest {
+    background: #e3efe7;
+    border: 1px solid #c4d8c8;
+}
+
+.travel-accordion .accordion-item {
+    border: 1px solid #d1ddd2;
+    border-radius: 0.85rem;
+    margin-bottom: 0.8rem;
+    overflow: hidden;
+}
+
+.travel-accordion .accordion-button {
+    background: #eef4ed;
+    color: #163327;
+    font-weight: 700;
+}
+
+.travel-accordion .accordion-button:not(.collapsed) {
+    background: #dcebdc;
+    color: #163327;
+    box-shadow: none;
+}
+
+.travel-accordion .accordion-body {
+    background: #f8fbf7;
+}
+
+.travel-accordion ul {
+    padding-left: 1.1rem;
+    margin-bottom: 0;
+}
+
+.travel-accordion li {
+    padding: 0.22rem 0;
+}
+
+/* ---- Activity rows style ---- */
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+}
+
+.activity-row {
+    display: grid;
+    grid-template-columns: minmax(240px, 380px) 1fr;
+    align-items: center;
+    gap: 1.3rem;
+    background: #f3f3f3;
+    padding: 1.3rem;
+}
+
+.activity-row-alt {
+    background: #ebebeb;
+}
+
+.activity-media-wrap {
+    overflow: hidden;
+}
+
+.activity-media {
+    width: 100%;
+    height: 16rem;
+    object-fit: cover;
+    display: block;
+}
+
+.activity-content h3 {
+    font-size: 2rem;
+    margin-bottom: 0.55rem;
+}
+
+.activity-content p {
+    margin-bottom: 0.6rem;
+}
+
+.activity-content ul {
+    margin-bottom: 0.75rem;
+    padding-left: 1rem;
+}
+
+.activity-content li {
+    margin-bottom: 0.25rem;
+}
+
+.activity-btn {
+    text-transform: uppercase;
+    letter-spacing: 0.04rem;
+    font-weight: 700;
+    border-width: 1px;
+}
+
+/* ---- END activity styles ---- */
+.plan-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.plan-list li {
+    padding: 0.32rem 0;
+}
+
+.plan-list i {
+    color: #2d8a5a;
+    margin-right: 0.38rem;
+}
+
+.table-organic {
+    background: #f8f4ea;
+    border: 1px solid #d9ccb4;
+}
+
+.table-organic thead {
+    background: #dbe9df;
+}
+
+.table-organic th,
+.table-organic td {
+    border-color: #d8d5cc;
+}
+
+.table-organic tbody tr:nth-child(even) {
+    background: #fdfaf3;
+}
+
+/* ============================================
+   BANDAS DE TEMPORADA — tabla de precios
+   ============================================ */
+
+.season-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.season-band {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    border-left: 6px solid transparent;
+}
+
+.season-verde {
+    background: #e8f2ea;
+    border-left-color: #2d8a5a;
+}
+
+.season-alta {
+    background: #f5ede0;
+    border-left-color: #d6a94f;
+}
+
+.season-feriado {
+    background: #163327;
+    border-left-color: #d6a94f;
+}
+
+.season-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 220px;
+}
+
+.season-info i {
+    font-size: 2rem;
+    color: #1f5f43;
+}
+
+.season-feriado .season-info i {
+    color: #d6a94f;
+}
+
+.season-info h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.3rem;
+    margin-bottom: 0.1rem;
+    color: #163327;
+}
+
+.season-feriado .season-info h3 {
+    color: #ffffff;
+}
+
+.season-info span {
+    font-size: 0.8rem;
+    color: #5a7060;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.season-feriado .season-info span {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.season-prices {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.season-price-pill {
+    background: #ffffff;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1.25rem;
+    text-align: center;
+    min-width: 110px;
+    box-shadow: 0 4px 14px rgba(16, 34, 26, 0.1);
+}
+
+.season-feriado .season-price-pill {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: none;
+}
+
+.pill-plan {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04rem;
+    color: #7a9080;
+    margin-bottom: 0.3rem;
+}
+
+.season-feriado .pill-plan {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.pill-amount {
+    display: block;
+    font-size: 1.55rem;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    color: #163327;
+    line-height: 1;
+}
+
+.season-feriado .pill-amount {
+    color: #d6a94f;
+}
+
+.season-note {
+    font-size: 0.82rem;
+    color: #7a9080;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+/* ============================================
+   BANNER PROMOCIONAL — Temporada Verde
+   ============================================ */
+
+.promo-verde {
+    background: linear-gradient(135deg, #1a4a32 0%, #2d8a5a 100%);
+    border-radius: 1.25rem;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.promo-verde::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.promo-verde::after {
+    content: "";
+    position: absolute;
+    bottom: -80px;
+    left: 30%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(214, 169, 79, 0.08);
+}
+
+.promo-verde-left {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.promo-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(214, 169, 79, 0.18);
+    border: 1px solid rgba(214, 169, 79, 0.45);
+    color: #d6a94f;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
+    padding: 0.3rem 0.85rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+}
+
+.promo-verde-left h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.8rem;
+    color: #ffffff;
+    margin-bottom: 0.25rem;
+    line-height: 1.1;
+}
+
+.promo-dates {
+    color: #a8cdb8;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
+    margin-bottom: 0.85rem;
+}
+
+.promo-desc {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 0;
+    max-width: 380px;
+}
+
+.promo-verde-prices {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    position: relative;
+    z-index: 1;
+    min-width: 220px;
+}
+
+.promo-pill {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 0.75rem;
+    padding: 0.65rem 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.promo-pill-featured {
+    background: rgba(214, 169, 79, 0.15);
+    border-color: rgba(214, 169, 79, 0.4);
+}
+
+.promo-pill-plan {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04rem;
+    color: rgba(255, 255, 255, 0.55);
+    flex: 1;
+}
+
+.promo-pill-price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.promo-pill-featured .promo-pill-price {
+    color: #d6a94f;
+}
+
+.promo-pill-note {
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.4);
+    align-self: flex-end;
+    margin-bottom: 2px;
+}
+
+@media (max-width: 768px) {
+    .promo-verde {
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        gap: 2rem;
+    }
+
+    .promo-verde-left h2 {
+        font-size: 2rem;
+    }
+
+    .promo-verde-prices {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .season-band {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.25rem;
+    }
+
+    .season-prices {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .season-price-pill {
+        flex: 1;
+        min-width: 80px;
+    }
+}
+
+.float-up {
+    animation: floatUp 8s ease-in-out infinite;
+}
+
+@keyframes floatUp {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+footer {
+    background: #163327;
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.whatsapp-float {
+    position: fixed;
+    right: 1.125rem;
+    bottom: 1.25rem;
+    width: 3.875rem;
+    height: 3.875rem;
+    z-index: 999;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #25d366;
+    color: #ffffff;
+    font-size: 1.75rem;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.scroll-top {
+    position: fixed;
+    left: 1.125rem;
+    bottom: 1.25rem;
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 50%;
+    border: 0;
+    background: #d6a94f;
+    color: #163327;
+    font-size: 1.375rem;
+    z-index: 999;
+    display: none;
+    transition: all 0.35s ease;
+}
+
+.scroll-top:hover {
+    background: #e2bd74;
+    transform: translateY(-2px);
+}
+
+/* ---- CAROUSEL STYLES ---- */
+.carousel-section {
+    background: linear-gradient(135deg, rgba(45, 138, 90, 0.08), rgba(214, 169, 79, 0.05));
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+}
+
+.carousel-gallery .carousel-inner {
+    border-radius: 1.25rem;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(22, 51, 39, 0.2);
+}
+
+.carousel-gallery .carousel-item {
+    position: relative;
+    height: 37.5rem;
+}
+
+.carousel-gallery .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-gallery .carousel-caption {
+    background: linear-gradient(to top, rgba(22, 51, 39, 0.8), transparent);
+    padding-bottom: 2rem;
+}
+
+.carousel-gallery .carousel-caption p {
+    font-size: 1.375rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.03rem;
+}
+
+.carousel-gallery .carousel-control-prev,
+.carousel-gallery .carousel-control-next {
+    width: 3.75rem;
+    height: 3.75rem;
+    background: rgba(22, 51, 39, 0.6);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+    transition: all 0.35s ease;
+}
+
+.carousel-gallery .carousel-control-prev:hover,
+.carousel-gallery .carousel-control-next:hover {
+    background: rgba(22, 51, 39, 0.9);
+    opacity: 1;
+}
+
+.carousel-gallery .carousel-control-prev-icon,
+.carousel-gallery .carousel-control-next-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: 100%;
+    filter: brightness(1.2);
+}
+
+@media (max-width: 768px) {
+    .carousel-gallery .carousel-item {
+        height: 25rem;
+    }
+
+    .carousel-gallery .carousel-caption {
+        padding-bottom: 1.25rem;
+    }
+
+    .carousel-gallery .carousel-caption p {
+        font-size: 1rem;
+    }
+}

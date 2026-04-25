@@ -1,0 +1,181 @@
+/* MEDIA QUERIES DEL PROYECTO MULTIPAGE */
+
+@media (max-width: 575.98px) {
+  body {
+    padding-top: 74px;
+  }
+
+  .hero {
+    min-height: 84vh;
+  }
+
+  .hero-title {
+    font-size: 2.35rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 2.05rem;
+  }
+
+  .site-nav .navbar-brand {
+    font-size: 0.95rem;
+  }
+
+  .eco-card img,
+  .gallery-item img {
+    height: 210px;
+  }
+
+  .action-row {
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .metric-label {
+    font-size: 1.12rem;
+  }
+
+  .activity-row {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+    padding: 0.85rem;
+  }
+
+  .activity-media {
+    height: 220px;
+  }
+
+  .activity-content h3 {
+    font-size: 1.7rem;
+  }
+
+  .story-banner {
+    padding: 2.35rem 0 2.1rem;
+  }
+
+  .story-kicker {
+    font-size: 0.8rem;
+    letter-spacing: 0.04rem;
+  }
+
+  .story-word {
+    letter-spacing: 0.08rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .story-col {
+    font-size: 0.98rem;
+    padding-right: 0;
+  }
+
+  .story-col-right {
+    border-left: 0;
+    border-top: 1px solid #d8d8d8;
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+
+  .price-highlight {
+    transform: none;
+  }
+
+  .map-full iframe {
+    height: 360px;
+  }
+
+  .whatsapp-float {
+    width: 56px;
+    height: 56px;
+    font-size: 1.5rem;
+    right: 12px;
+  }
+
+  .scroll-top {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+    left: 12px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  body {
+    padding-top: 78px;
+  }
+
+  .hero-title {
+    font-size: 2.9rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .section-title {
+    font-size: 2.3rem;
+  }
+
+  .eco-card img,
+  .gallery-item img {
+    height: 220px;
+  }
+
+  .activity-row {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-media {
+    height: 250px;
+  }
+
+  .activity-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .story-word {
+    letter-spacing: 0.12rem;
+  }
+
+  .story-col {
+    padding-right: 0;
+  }
+
+  .story-col-right {
+    border-left: 0;
+    border-top: 1px solid #d8d8d8;
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  body {
+    padding-top: 84px;
+  }
+
+  .hero-title {
+    font-size: 3.55rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.13rem;
+  }
+
+  .section-title {
+    font-size: 2.55rem;
+  }
+
+  .map-full iframe {
+    height: 440px;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 88px;
+  }
+}
